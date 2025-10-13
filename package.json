@@ -1,0 +1,10 @@
+{
+  "name": "@gaddario98/react-ionic-utiles",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "peerDependencies": {
+    "@gaddario98/utiles": "*",
+    "@ionic/react": "*",
+    "react": "*"
+  }
+}
