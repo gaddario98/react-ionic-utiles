@@ -1,9 +1,9 @@
 {
   "name": "@gaddario98/react-ionic-utiles",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "peerDependencies": {
-    "@gaddario98/utiles": "*",
+    "@gaddario98/utiles": "^1.0.15",
     "@ionic/react": "*",
     "react": "*"
   },
