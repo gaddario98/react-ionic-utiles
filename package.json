@@ -1,30 +1,71 @@
 {
   "name": "@gaddario98/react-ionic-utiles",
-  "version": "1.0.2",
-  "main": "dist/index.js",
-  "peerDependencies": {
-    "@gaddario98/utiles": "^1.0.15",
-    "@ionic/react": "*",
-    "react": "*"
+  "version": "1.0.21",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js",
+    "prepublishOnly": "yarn build"
   },
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/rollup-plugin-peer-deps-external": "^2",
+    "babel-plugin-react-compiler": "1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rollup": "^4.40.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@gaddario98/utiles": "^1.0.16"
+  },
+  "peerDependencies": {
+    "@ionic/react": "*",
+    "react": ">=18.0.0 <20.0.0"
+  },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.mjs"
     },
     "./helpers": {
-      "types": "./dist/helpers/index.d.ts",
-      "import": "./dist/helpers/index.mjs",
-      "require": "./dist/helpers/index.js",
-      "default": "./dist/helpers/index.js"
+      "types": "./dist/types/helpers.d.ts",
+      "import": "./dist/esm/helpers.mjs",
+      "require": "./dist/cjs/helpers.js",
+      "default": "./dist/esm/helpers.mjs"
     }
   },
-  "type": "module",
-  "scripts": {
-    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js"
-  }
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaddario98/react-ionic-utiles"
+  },
+  "keywords": [
+    "react-ionic",
+    "ionic",
+    "react",
+    "utilities",
+    "helpers",
+    "gaddario98"
+  ],
+  "author": "Giosuè Addario",
+  "bugs": {
+    "url": "https://github.com/gaddario98/react-ionic-utiles/issues"
+  },
+  "homepage": "https://github.com/gaddario98/react-ionic-utiles#readme"
 }
